@@ -1,7 +1,7 @@
 import * as THREE from "three"
 import { extend } from "@react-three/fiber"
 
-export class ImageMaterial extends THREE.ShaderMaterial {
+export class ImageFadeMaterial extends THREE.ShaderMaterial {
     constructor() {
         super({
             uniforms: {
@@ -68,4 +68,4 @@ export class ImageMaterial extends THREE.ShaderMaterial {
     }
 }
 
-extend({ ImageMaterial })
+extend({ ImageFadeMaterial })

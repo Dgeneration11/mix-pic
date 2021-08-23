@@ -1,11 +1,10 @@
-import './App.css';
-import * as THREE from 'three';
-import React, { Suspense, useRef, useState } from 'react';
-import { Canvas, useFrame, userLoader } from 'react-three-fiber';
-import img1 from './img/img1.jpg';
-import img2 from './img/img2.jpg';
-import disp from './img/displacement/d1.jpg';
-import './ImageMaterial'
+import * as THREE from "three"
+import React, { Suspense, useRef, useState } from "react"
+import { Canvas, useFrame, useLoader } from "@react-three/fiber"
+import img1 from "./img/1.jpg"
+import img2 from "./img/2.jpg"
+import disp from "./img/displacement/d1.jpg"
+import "./ImageFadeMaterial"
 
 function FadingImage() {
   const ref = useRef()
@@ -20,12 +19,12 @@ function FadingImage() {
   )
 }
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <h1>Hello World</h1>
-    </div>
-  );
+    <Canvas camera={{ position: [0, 0, 2], fov: 50 }}>
+      <Suspense fallback={null}>
+        <FadingImage />
+      </Suspense>
+    </Canvas>
+  )
 }
-
-export default App;
