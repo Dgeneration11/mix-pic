@@ -1,9 +1,9 @@
 import * as THREE from "three"
 import React, { Suspense, useRef, useState } from "react"
 import { Canvas, useFrame, useLoader } from "@react-three/fiber"
-import img1 from "./img/i1.jpg"
-import img2 from "./img/i2.jpg"
-import disp from "./img/displacement/d1.jpg"
+import img1 from "./img/11.jpg"
+import img2 from "./img/22.jpg"
+import disp from "./img/displacement/d6.jpg"
 import "./ImageFadeMaterial"
 
 function FadingImage() {
